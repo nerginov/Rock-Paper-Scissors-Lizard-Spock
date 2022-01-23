@@ -1,0 +1,220 @@
+button{
+    cursor: pointer;
+}
+.user-choice{
+    &__btn-circle{
+        -webkit-appearance: none;
+        border: none;
+        border-radius: 50%;
+        position: absolute;
+        width: 9rem;
+        height: 9rem;
+        box-shadow: 0px -14px 0px -9px rgba(0,0,0,0.1) inset;
+       -webkit-box-shadow: 0px -14px 0px -9px rgba(0,0,0,0.1) inset;
+       -moz-box-shadow: 0px -14px 0px -9px rgba(0,0,0,0.1) inset;
+    
+       &--scissors{
+           background: linear-gradient(to bottom, $scissorsGradient);
+           transform: translate(0,-10rem);
+        }
+        &--spock{
+            background: linear-gradient(to bottom, $spockGradient);
+            transform: translate(-11rem, -3rem);
+        }
+        &--paper{
+            background: linear-gradient(to bottom, $paperGradient);
+            transform: translate(11rem, -3rem);
+        }
+        &--lizard{
+            background: linear-gradient(to bottom, $lizardGradient);
+            transform: translate(-7rem, 10rem);
+        }
+        &--rock{
+            background: linear-gradient(to bottom, $rockGradient);
+        transform: translate(7rem, 10rem);
+    }
+    }
+    &__img-wrapper{
+        display: inline-block;
+        border: none;
+        border-radius: 50%;
+        background: whitesmoke;
+        box-shadow: 0px 13px 0px -9px rgba(0,0,0,0.1) inset;
+        -webkit-box-shadow: 0px 13px 0px -9px rgba(0,0,0,0.1) inset;
+        -moz-box-shadow: 0px 13px 0px -9px rgba(0,0,0,0.1) inset;
+    }
+    &__img{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin:1.5rem;
+    }
+
+}
+.app-container__btn-rules{
+    -webkit-appearance: none;
+    margin-left:auto;
+    margin-right:auto;
+    border: 0.2rem solid $headerOutline;
+    border-radius: 1rem;
+    background: transparent;
+    opacity: .8;
+  text-align: center; 
+    width: 12rem;
+    height: 4rem;
+ }
+
+
+
+
+
+ .result{
+    .result__user__choice,  .result__house__choice {
+        position: relative;
+       -webkit-appearance: none;
+       border: none;
+       border-radius: 50%;
+       width: 11.5rem;
+       height: 11.5rem;
+       box-shadow: 0px -14px 0px -9px rgba(0,0,0,0.1) inset;
+      -webkit-box-shadow: 0px -14px 0px -9px rgba(0,0,0,0.1) inset;
+      -moz-box-shadow: 0px -14px 0px -9px rgba(0,0,0,0.1) inset;
+      margin-bottom: 2rem;
+      &--preview{
+          width: 10rem;
+          height: 10rem;
+          background:rgba(255, 255, 255, 0.03);
+          box-shadow: none;
+           -webkit-animation: scale-down 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+            animation: scale-down 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+        //   margin-bottom: 3.6rem;
+      }
+      &--scissors{
+        background: linear-gradient(to bottom, $scissorsGradient);
+        }
+        &--spock{
+            background: linear-gradient(to bottom, $spockGradient);
+        }
+        &--paper{
+            background: linear-gradient(to bottom, $paperGradient);
+        }
+        &--lizard{
+            background: linear-gradient(to bottom, $lizardGradient);
+        }
+        &--rock{
+            background: linear-gradient(to bottom, $rockGradient);
+            
+        }
+   }
+&__img-wrapper{
+display: inline-block;
+border: none;
+border-radius: 50%;
+background: whitesmoke;
+box-shadow: 0px 13px 0px -9px rgba(0,0,0,0.1) inset;
+-webkit-box-shadow: 0px 13px 0px -9px rgba(0,0,0,0.1) inset;
+-moz-box-shadow: 0px 13px 0px -9px rgba(0,0,0,0.1) inset;
+
+ }
+ &__img, &__img__house{
+    width: 4.5rem;
+    height: 4.5rem;
+    margin:2.1rem;
+}
+}
+
+
+.result-summary{
+    &__btn-play-again{
+        width: 20rem;
+        height:4rem;
+        -webkit-appearance: none;
+        background-color: white;
+        border:none;
+        border-radius: 1rem;
+    }
+}
+.result__user__choice{
+    position: relative;
+}
+.winner-borders::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 3.5rem rgba(255, 255, 255, 0.09),
+        0 0 0 5rem rgba(255, 255, 255, 0.06),
+        0 0 0 7rem rgba(255, 255, 255, 0.03),
+        0 0 0 9rem rgba(255, 255, 255, 0.01);
+}
+
+
+@include media(medium){
+    .app-container__btn-rules{
+        position: absolute;
+        transform: translate(80rem, 65rem);
+    }
+    .result{
+        margin-top: 7rem;
+        // border: 1px solid red;
+        .result__user__choice,  .result__house__choice {
+           width: 25rem;
+           height: 25rem;
+    
+    &--preview{
+        width: 23rem;
+           height: 23rem;
+    }
+    
+    } &__img, &__img__house{
+        width: 10rem;
+        height: 10rem;
+        margin:5rem;
+    }
+    &__user__choice::before {
+        box-shadow:
+            0 0 0 6rem rgba(255, 255, 255, 0.09),
+            0 0 0 9rem rgba(255, 255, 255, 0.06),
+            0 0 0 12rem rgba(255, 255, 255, 0.03),
+            0 0 0 15rem rgba(255, 255, 255, 0.01);
+    }
+}}
+
+@include media(tablet){
+    .app-container{
+    .user-choice__btn-circle{
+        width: 14.5rem;
+        height: 14.5rem;
+
+        &--scissors{
+            transform: translate(0,-16rem);
+            }
+            &--spock{
+                transform: translate(-16rem, -5rem);
+            }
+            &--paper{
+                transform: translate(16rem, -5rem);
+            }
+            &--lizard{
+                transform: translate(-10rem, 14rem);
+            }
+            &--rock{
+                transform: translate(10rem, 14rem);
+            }
+        }
+        .user-choice__img{
+        width: 5.5rem;
+        height: 5.5rem;
+        margin:2.7rem;
+    }
+}
+}
+
+
+@include media(large){.app-container__btn-rules{
+    transform: translate(90rem, 65rem);
+}}

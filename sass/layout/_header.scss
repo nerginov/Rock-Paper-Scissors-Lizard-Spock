@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.4rem solid $headerOutline;
+    border-radius: 0.5rem;
+    margin-top:3rem;
+    margin-bottom: 10rem;
+    padding: 1rem 2rem 1rem 2rem;
+   .score{
+       cursor: pointer;
+        display:flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        padding: 1rem 2.5rem 1rem 2.5rem;
+        border: none ;
+        border-radius: 0.5rem;
+        background-color: whitesmoke;
+    }
+}
+

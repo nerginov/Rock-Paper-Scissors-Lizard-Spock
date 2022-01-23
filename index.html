@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+<script defer src="js/script.js"></script>
+<title>Rock Paper Scissors Lizard Spock</title> 
+</head>
+<body>
+    <section class="app-container ">
+
+        <header>
+            <p class="logo">Rock<br>Scissors<br>Lizard<br>Spock</p>
+            <div class="score">
+                 <p>Score</p><span class="scoreboard"">0</span>
+            </div>
+        </header>
+
+        <div class="user-choice ">
+            <img src="images/bg-pentagon.svg" alt="pentagon-img" class='user-choice__toss-pentagon'>
+
+            <button class="user-choice__btn-circle user-choice__btn-circle--scissors">
+                <span class="user-choice__img-wrapper">
+                    <img src="images/icon-scissors.svg" alt="scissors-img" class="user-choice__img">
+                </span>
+            </button>
+
+            <button class="user-choice__btn-circle user-choice__btn-circle--spock">
+                <span class="user-choice__img-wrapper">
+                    <img src="images/icon-spock.svg" alt="spock-img" class="user-choice__img">
+                </span>
+            </button>
+
+            <button class="user-choice__btn-circle user-choice__btn-circle--paper">
+                <span class="user-choice__img-wrapper">
+                    <img src="images/icon-paper.svg" alt="paper-img" class="user-choice__img">
+                </span>
+            </button>
+
+            <button class="user-choice__btn-circle user-choice__btn-circle--lizard">
+                <span class="user-choice__img-wrapper">
+                    <img src="images/icon-lizard.svg" alt="lizard-img" class="user-choice__img">
+                </span>
+            </button>
+
+            <button class="user-choice__btn-circle user-choice__btn-circle--rock">
+                <span class="user-choice__img-wrapper">
+                    <img src="images/icon-rock.svg" alt="rock-img" class="user-choice__img">
+                </span>
+            </button>
+
+        </div>
+
+    <!-- after you choose your toss -->
+        <div class="result hidden">
+        <div class="result__user">
+          <button class="result__user__choice ">
+          <span class="result__img-wrapper">
+              <img src="" alt="rock-img" class="result__img">
+          </span>
+          </button>
+          <p>you picked</p>
+          </div>
+
+           <!--animated delay -->
+          <div class='result__house'>
+            <button class='result__house__choice result__house__choice--preview hidden'> 
+
+                <!--result of the house after the delay-->
+            </button>
+          <button class="result__house__choice result__house__choice--final hidden">
+          <span class="result__img-wrapper">
+              <img src="" alt="rock-img" class="result__img__house">
+          </span>
+          </button>
+          <p>the house picked</p>
+        </div>
+        </div> 
+
+        <!--When the choice of the house is live-->
+        <div class="result-summary hidden">
+            <p class='result-summary__win-or-lose'></p>
+            <button class='result-summary__btn-play-again'>Play again</button>
+
+        </div>
+
+
+        <button class="app-container__btn-rules">Rules</button>
+
+    </section>
+    <!-- Rules hidden modal on btn click-->
+    <section class="modal hidden">
+    <h1>Rules</h1>
+    <img src="images/image-rules-bonus.svg" alt="rules-img" class='modal__rules-img'>
+   <button class="modal__btn-close">&times</button>
+    </section>
+</body>
+</html>

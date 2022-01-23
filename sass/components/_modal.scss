@@ -1,0 +1,50 @@
+.modal{
+    border-radius: 0.5rem;
+    // height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    position: fixed;
+    height: 45rem;
+    width: auto;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+
+    &__rules-img{
+        height:30rem;
+        width: auto;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    &__btn-close{
+        // -webkit-appearance: none;
+        cursor: pointer;
+        appearance: none;
+        background: none;
+        opacity: 0.7;
+        border: none;
+    }
+   
+}
+
+.hidden{
+    display: none;
+}
+.blurred{
+    -webkit-filter: blur(0.6rem);
+    filter: blur(0.6rem);
+    transition: filter 500ms ease, -webkit-filter 500ms ease;
+}
+
+
+@include media(medium){
+    .modal{
+        height: 55rem;
+        &__rules-img{
+            height:40rem;}
+    }
+}
+
+

@@ -1,0 +1,36 @@
+.user-choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12rem;
+
+
+    &__toss-pentagon{
+        width: auto;
+        height: 22rem;
+    
+}
+}
+
+
+
+.result{
+    display: flex;
+    justify-content: space-between;
+    align-items: space-around;
+    margin-bottom: 5rem;
+    margin-top:-2rem;
+    &__house, &__user{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@include media(tablet){
+.user-choice{
+        &__toss-pentagon{
+            width: auto;
+            height: 32rem;
+        }}}

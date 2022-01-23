@@ -1,0 +1,41 @@
+.app-container{
+    height: 100vh;
+    background: radial-gradient($radialGradient);
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.result-summary{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+@include media(medium){
+    .app-container{
+        padding-left:20rem;
+        padding-right: 20rem;
+        .result{
+            p{transform: translateY(-35rem);}}
+        }
+        .result-summary{
+            transform: translateY(-27rem);
+        }
+    }
+    
+    @include media(large){
+    .app-container{
+        padding-left :30rem;
+        padding-right: 30rem;
+}}

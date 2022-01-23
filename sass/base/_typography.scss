@@ -1,0 +1,105 @@
+*{
+    font-family: 'Barlow Semi Condensed', sans-serif; //600 700
+}
+
+.app-container{
+    header{
+    
+        .logo{
+            font-size: 1.3rem;
+            line-height: 1.15rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: whitesmoke;
+            opacity: .8;
+        }
+        .score{
+        p{
+            color: $scoreText;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+        span{
+            color:$darkText;
+            font-size:3.6rem;
+            font-weight: 700;
+            line-height: 3.5rem;
+        }
+        
+    }
+}
+    &__btn-rules{
+        font-size: 2rem;
+        color: whitesmoke;
+        letter-spacing: 0.1rem;
+    }
+
+    .result{
+        p{
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            opacity: 0.8;
+            text-transform: uppercase;
+        }
+    }
+
+}
+
+.modal{
+    h1{
+    font-size: 3rem;
+    color:$darkText;
+    font-weight: 700;
+    }
+&__btn-close{
+    font-size: 6rem;
+    font-weight: 600;
+    color: $headerOutline;
+}}
+
+.result-summary{
+    p{
+        font-size: 6rem;
+        font-weight: 700;
+        color: whitesmoke;
+        text-transform: uppercase;}
+        
+&__btn-play-again{
+    font-size: 2rem;
+    color:$darkText;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+
+}
+}
+
+
+@include media(tablet){
+    .app-container{
+        header{
+    .logo{
+        font-size:3rem;
+        line-height: 2.8rem;
+    }
+    .score{
+        p{font-size: 2.6rem;}
+        span{font-size:5rem}
+}
+    
+   }}}
+
+
+ @include media(medium){
+     .app-container{
+        &__btn-rules{
+            font-size: 2.5rem;
+        }
+         .result{
+             p{
+                 font-size: 3rem;
+             }
+         }
+     }
+ }
