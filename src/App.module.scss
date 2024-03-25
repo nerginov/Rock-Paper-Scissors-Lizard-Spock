@@ -1,0 +1,53 @@
+@use "./variables.scss" as var;
+@import "./mixins.scss";
+body {
+  background: var.$primary-background-color;
+}
+
+.app {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include media(tablet) {
+    padding: 5rem 8rem;
+  }
+  @include media(small) {
+    padding: 5rem 15rem;
+  }
+  @include media(large) {
+    padding: 5rem 25rem;
+  }
+
+  .rules-button {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+    padding: 1rem 4rem;
+    appearance: none;
+    background: none;
+    border: 0.2rem solid var.$border-color;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var.$text-color-white;
+    width: max-content;
+    margin-top: 5rem;
+    display: block;
+    @include media(tablet) {
+      margin-top: 10rem;
+    }
+  }
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(8px); /* Apply blur effect */
+}

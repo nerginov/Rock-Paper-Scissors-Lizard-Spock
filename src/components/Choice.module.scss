@@ -1,0 +1,111 @@
+@use "../variables.scss" as var;
+@import "../mixins.scss";
+.choice {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10.5rem;
+  height: 10.5rem;
+  border-radius: 50%;
+  box-shadow: 0px -14px 0px -9px rgba(0, 0, 0, 0.1) inset;
+
+  //toss outline color
+  &--rock {
+    background: var.$rockGradient;
+  }
+  &--paper {
+    background: var.$paperGradient;
+  }
+  &--scissors {
+    background: var.$scissorsGradient;
+  }
+  &--spock {
+    background: var.$spockGradient;
+  }
+  &--lizard {
+    background: var.$lizardGradient;
+  }
+
+  //positioning on initial stage of play
+  &--rock.initial {
+    top: -4rem;
+  }
+  &--paper.initial {
+    top: 6rem;
+    left: -2rem;
+  }
+  &--scissors.initial {
+    top: 6rem;
+    right: -2rem;
+  }
+  &--lizard.initial {
+    bottom: -2rem;
+    left: 2rem;
+  }
+  &--spock.initial {
+    bottom: -2rem;
+    right: 2rem;
+  }
+
+  &__img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    background-color: var.$text-color-white;
+    box-shadow: 0px 13px 0px -9px rgba(0, 0, 0, 0.1) inset;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  @include media(tablet) {
+    width: 13.5rem;
+    height: 13.5rem;
+  }
+}
+
+//choice in result stage of play
+.result {
+  width: 12.5rem;
+  height: 12.5rem;
+  position: relative;
+  @include media(tablet) {
+    width: 15.5rem;
+    height: 15.5rem;
+  }
+}
+
+//winner outline effect
+.winner::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3.5rem rgba(255, 255, 255, 0.09),
+    0 0 0 5rem rgba(255, 255, 255, 0.06), 0 0 0 7rem rgba(255, 255, 255, 0.03),
+    0 0 0 9rem rgba(255, 255, 255, 0.01);
+  animation: scaleUp 0.8s infinite alternate;
+}
+.non-clickable {
+  pointer-events: none;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,56 @@
+@use "../variables.scss" as var;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.4rem solid var.$border-color;
+  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var.$text-color-white;
+    opacity: 0.8;
+  }
+  &__score-container {
+    display: flex;
+    align-items: center;
+    background: var.$text-color-white;
+    border-radius: 1rem;
+    padding-inline: 4rem;
+    p {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: var.$text-color-dark;
+      font-weight: bold;
+      span:first-of-type {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+      }
+      span:last-of-type {
+        font-size: 3.6rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+.animated {
+  animation: scaleDownUp 0.5s ease-in-out;
+  @keyframes scaleDownUp {
+    0% {
+      transform: scale(0.2);
+    }
+    50% {
+      transform: scale(0);
+    }
+    70% {
+      transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}

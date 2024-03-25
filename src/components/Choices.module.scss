@@ -1,0 +1,13 @@
+@use "../variables.scss" as var;
+@import "../mixins.scss";
+.choices {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+  @include media(tablet) {
+    .choices-pentagon {
+      width: 40rem;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "short_name": "Rock,Paper,Scissors,Lizard,Spock",
+  "name": "Rock,Paper,Scissors,Lizard,Spock",
+  "start_url": ".",
+  "display": "standalone"
+}

@@ -1,0 +1,97 @@
+@use "../variables.scss" as var;
+@import "../mixins.scss";
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10rem;
+  @include media(tablet) {
+    padding-inline: 5rem;
+  }
+  @include media(small) {
+    padding-inline: 10rem;
+  }
+
+  &__choices {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &__user-container,
+    &__house-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        color: var.$text-color-white;
+      }
+    }
+  }
+  &__announcement-container {
+    margin-top: 5rem;
+    h2 {
+      text-align: center;
+      color: var.$text-color-white;
+      font-size: 4rem;
+      animation: scaleUpText 0.5s ease-in-out 2s; //delay while waiting for the house choice
+    }
+    &__button {
+      font-size: 1.6rem;
+      font-weight: bold;
+      padding: 1rem 6rem;
+      margin-top: 2rem;
+      color: var.$text-color-dark;
+      appearance: none;
+      border: none;
+      border-radius: 1rem;
+      animation: scaleUpText 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+.preview {
+  width: 12.5rem;
+  height: 12.5rem;
+  position: relative;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: none;
+  -webkit-animation: scale-down 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    infinite alternate both;
+  animation: scale-down 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    alternate both;
+
+  @include media(tablet) {
+    width: 15.5rem;
+    height: 15.5rem;
+  }
+}
+
+@keyframes scale-down {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@keyframes scaleUpText {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
